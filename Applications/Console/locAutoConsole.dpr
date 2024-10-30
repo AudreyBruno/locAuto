@@ -5,11 +5,12 @@ program locAutoConsole;
 {$R *.res}
 
 uses
-  System.SysUtils;
+  System.SysUtils,
+  untMainMenu in 'untMainMenu.pas';
 
 begin
   try
-    { TODO -oUser -cConsole Main : Insert code here }
+    MainMenu;
   except
     on E: Exception do
       Writeln(E.ClassName, ': ', E.Message);
