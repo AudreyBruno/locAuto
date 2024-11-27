@@ -200,6 +200,7 @@
         <DCCReference Include="..\..\Core\Models\untCliente.pas"/>
         <DCCReference Include="..\..\Core\Ports\untIUseCaseCliente.pas"/>
         <DCCReference Include="..\..\Core\Response\untResponse.pas"/>
+        <DCCReference Include="..\..\Core\DTO\untDtoCliente.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

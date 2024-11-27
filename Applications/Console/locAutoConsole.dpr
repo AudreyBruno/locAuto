@@ -9,7 +9,8 @@ uses
   untMainMenu in 'untMainMenu.pas',
   untCliente in '..\..\Core\Models\untCliente.pas',
   untIUseCaseCliente in '..\..\Core\Ports\untIUseCaseCliente.pas',
-  untResponse in '..\..\Core\Response\untResponse.pas';
+  untResponse in '..\..\Core\Response\untResponse.pas',
+  untDtoCliente in '..\..\Core\DTO\untDtoCliente.pas';
 
 begin
   try
