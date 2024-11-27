@@ -7,7 +7,8 @@ program locAutoConsole;
 uses
   System.SysUtils,
   untMainMenu in 'untMainMenu.pas',
-  untCliente in '..\..\Core\Models\untCliente.pas';
+  untCliente in '..\..\Core\Models\untCliente.pas',
+  untIUseCaseCliente in '..\..\Core\Ports\untIUseCaseCliente.pas';
 
 begin
   try
