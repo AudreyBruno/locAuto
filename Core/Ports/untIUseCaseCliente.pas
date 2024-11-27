@@ -2,7 +2,7 @@ unit untIUseCaseCliente;
 
 interface
 
-uses untCliente;
+uses untCliente, untResponse;
 
 type
   IUseCaseCliente = interface
