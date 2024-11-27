@@ -197,6 +197,7 @@
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
         <DCCReference Include="untMainMenu.pas"/>
+        <DCCReference Include="..\..\Core\Models\untCliente.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

@@ -6,7 +6,8 @@ program locAutoConsole;
 
 uses
   System.SysUtils,
-  untMainMenu in 'untMainMenu.pas';
+  untMainMenu in 'untMainMenu.pas',
+  untCliente in '..\..\Core\Models\untCliente.pas';
 
 begin
   try
