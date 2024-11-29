@@ -2,6 +2,9 @@ unit untCliente;
 
 interface
 
+uses
+  System.SysUtils, untExceptions;
+
 type
   TCliente = class
   private
@@ -39,6 +42,8 @@ type
     property Cidade: String read FCidade write SetCidade;
     property UF: String read FUF write SetUF;
     property Telefone: String read FTelefone write SetTelefone;
+
+    procedure ValidarRegras;
   end;
 
 implementation
@@ -98,6 +103,27 @@ end;
 procedure TCliente.SetUF(const Value: String);
 begin
   FUF := Value;
+end;
+
+procedure TCliente.ValidarRegras;
+begin
+  if Trim(FNome) = '' then
+    ExceptionNome;
+
+  if Length(FNome) < 3 then
+    ExceptionMinNome;
+
+  if Trim(FDocumento) = '' then
+    ExceptionDocumento;
+
+  if Length(FDocumento) < 11 then
+    ExceptionMinDocumento;
+
+  if Trim(FTelefone) = '' then
+    ExceptionTelefone;
+
+  if Length(FTelefone) < 10 then
+    ExceptionMinTelefone;
 end;
 
 end.

@@ -3,7 +3,7 @@ unit untUseCaseCliente;
 interface
 
 uses System.SysUtils, untIUseCaseCliente, untCliente, untDtoCliente, untResponse,
-  untEnums;
+  untEnums, untUtils;
 
 type
   TUseCaseCliente = class(TInterfacedObject, IUseCaseCliente)
@@ -22,6 +22,8 @@ var
   response: TResponse;
 begin
   try
+    cliente.ValidarRegras;
+
     response.Success := True;
     response.ErrorCode := 0;
     response.Message := RetornaMsgResponse.ALTERADO_COM_SUCESSO;
@@ -29,7 +31,7 @@ begin
   except
     on e: Exception do
       begin
-
+        response := TratarException(e);
       end;
   end;
 
@@ -41,6 +43,8 @@ var
   response: TResponse;
 begin
   try
+    cliente.ValidarRegras;
+
     response.Success := True;
     response.ErrorCode := 0;
     response.Message := RetornaMsgResponse.CADASTRADO_COM_SUCESSO;
@@ -48,7 +52,7 @@ begin
   except
     on e: Exception do
       begin
-
+        response := TratarException(e);
       end;
   end;
 
@@ -67,7 +71,7 @@ begin
   except
     on e: Exception do
       begin
-
+        response := TratarException(e);
       end;
   end;
 
@@ -86,7 +90,7 @@ begin
   except
     on e: Exception do
       begin
-
+        response := TratarException(e);
       end;
   end;
 
