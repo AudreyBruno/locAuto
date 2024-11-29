@@ -201,6 +201,8 @@
         <DCCReference Include="..\..\Core\Ports\untIUseCaseCliente.pas"/>
         <DCCReference Include="..\..\Core\Response\untResponse.pas"/>
         <DCCReference Include="..\..\Core\DTO\untDtoCliente.pas"/>
+        <DCCReference Include="..\..\Core\UseCases\untUseCaseCliente.pas"/>
+        <DCCReference Include="..\..\Core\Enums\untEnums.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
