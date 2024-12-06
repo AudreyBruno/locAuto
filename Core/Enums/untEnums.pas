@@ -3,6 +3,8 @@ unit untEnums;
 interface
 
 type
+  TStatus = (sDisponivel, sAlugado);
+
   TMsgResponse = record
     CADASTRADO_COM_SUCESSO,
     ALTERADO_COM_SUCESSO,

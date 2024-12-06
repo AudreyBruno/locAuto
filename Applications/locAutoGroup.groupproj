@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{25FFA2EE-3A25-4DE1-AD32-B717289E224B}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Console\locAutoConsole.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Test\locTest.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="locAutoConsole">
+        <MSBuild Projects="Console\locAutoConsole.dproj"/>
+    </Target>
+    <Target Name="locAutoConsole:Clean">
+        <MSBuild Projects="Console\locAutoConsole.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="locAutoConsole:Make">
+        <MSBuild Projects="Console\locAutoConsole.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="locTest">
+        <MSBuild Projects="Test\locTest.dproj"/>
+    </Target>
+    <Target Name="locTest:Clean">
+        <MSBuild Projects="Test\locTest.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="locTest:Make">
+        <MSBuild Projects="Test\locTest.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="locAutoConsole;locTest"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="locAutoConsole:Clean;locTest:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="locAutoConsole:Make;locTest:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

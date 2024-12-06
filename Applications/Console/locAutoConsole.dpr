@@ -14,7 +14,11 @@ uses
   untUseCaseCliente in '..\..\Core\UseCases\untUseCaseCliente.pas',
   untEnums in '..\..\Core\Enums\untEnums.pas',
   untExceptions in '..\..\Core\Exceptions\untExceptions.pas',
-  untUtils in '..\..\Utils\untUtils.pas';
+  untUtils in '..\..\Utils\untUtils.pas',
+  untVeiculo in '..\..\Core\Models\untVeiculo.pas',
+  untIUseCaseVeiculo in '..\..\Core\Ports\untIUseCaseVeiculo.pas',
+  untDtoVeiculo in '..\..\Core\DTO\untDtoVeiculo.pas',
+  untUseCaseVeiculo in '..\..\Core\UseCases\untUseCaseVeiculo.pas';
 
 begin
   try
