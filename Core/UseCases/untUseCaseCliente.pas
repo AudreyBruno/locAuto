@@ -3,7 +3,7 @@ unit untUseCaseCliente;
 interface
 
 uses System.SysUtils, untIUseCaseCliente, untCliente, untDtoCliente, untResponse,
-  untEnums, untUtils;
+  untEnums, untUtils, untExceptions;
 
 type
   TUseCaseCliente = class(TInterfacedObject, IUseCaseCliente)
@@ -11,6 +11,8 @@ type
     function Alterar(cliente: TCliente): TResponse;
     function Deletar(id: Integer): TResponse;
     function Consultar(Dto: DtoCliente): TResponse;
+  private
+    procedure ValidarId(id: Integer);
   end;
 
 implementation
@@ -23,6 +25,7 @@ var
 begin
   try
     cliente.ValidarRegras;
+    ValidarId(cliente.ID);
 
     response.Success := True;
     response.ErrorCode := 0;
@@ -83,6 +86,8 @@ var
   response: TResponse;
 begin
   try
+    ValidarId(id);
+
     response.Success := True;
     response.ErrorCode := 0;
     response.Message := RetornaMsgResponse.DELETADO_COM_SUCESSO;
@@ -95,6 +100,12 @@ begin
   end;
 
   Result := response;
+end;
+
+procedure TUseCaseCliente.ValidarId(id: Integer);
+begin
+  if id <= 0 then
+    ExceptionIdInvalido;
 end;
 
 end.

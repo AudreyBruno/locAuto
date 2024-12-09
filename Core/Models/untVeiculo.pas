@@ -2,7 +2,8 @@ unit untVeiculo;
 
 interface
 
-uses untEnums;
+uses
+  System.SysUtils, untEnums, untExceptions;
 
 type
   TVeiculo = class
@@ -23,6 +24,8 @@ type
     property Placa: String read FPlaca write SetPlaca;
     property Valor: Currency read FValor write SetValor;
     property Status: TStatus read FStatus write SetStatus;
+
+    procedure ValidarRegras;
   end;
 
 implementation
@@ -52,6 +55,24 @@ end;
 procedure TVeiculo.SetValor(const Value: Currency);
 begin
   FValor := Value;
+end;
+
+procedure TVeiculo.ValidarRegras;
+begin
+  if Trim(FNome) = '' then
+    ExceptionNome;
+
+  if Length(FNome) < 3 then
+    ExceptionMinNome;
+
+  if Trim(FPlaca) = '' then
+    ExceptionPlaca;
+
+  if Length(FPlaca) < 6 then
+    ExceptionMinPlaca;
+
+  if FValor <= 0 then
+    ExceptionValor;
 end;
 
 end.

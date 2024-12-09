@@ -6,20 +6,39 @@ uses
   System.SysUtils;
 
 type
+  TExceptionIdInvalido = class(Exception);
+
   TExceptionNome = class(Exception);
   TExceptionMinNome = class(Exception);
+
   TExceptionDocumento = class(Exception);
-  TExceptionMinDocumento = class(Exception);  
+  TExceptionMinDocumento = class(Exception);
   TExceptionTelefone = class(Exception);
   TExceptionMinTelefone = class(Exception);
 
+  TExceptionPlaca = class(Exception);
+  TExceptionMinPlaca = class(Exception);
+  TExceptionValor = class(Exception);
+
+  procedure ExceptionIdInvalido;
+
   procedure ExceptionNome;
   procedure ExceptionMinNome;
+
   procedure ExceptionDocumento;
   procedure ExceptionMinDocumento;
   procedure ExceptionTelefone;
   procedure ExceptionMinTelefone;
+
+  procedure ExceptionPlaca;
+  procedure ExceptionMinPlaca;
+  procedure ExceptionValor;
 implementation
+
+procedure ExceptionIdInvalido;
+begin
+  raise TExceptionNome.Create('Ó id informado é inválido!');
+end;
 
 procedure ExceptionNome;
 begin
@@ -49,6 +68,21 @@ end;
 procedure ExceptionMinTelefone;
 begin
   raise TExceptionMinTelefone.Create('Telefone deve ter no mínimo 10 caracteres!');
+end;
+
+procedure ExceptionPlaca;
+begin
+  raise TExceptionTelefone.Create('Placa não pode estar em branco!');
+end;
+
+procedure ExceptionMinPlaca;
+begin
+  raise TExceptionMinDocumento.Create('Placa deve ter no mínimo 6 caracteres!');
+end;
+
+procedure ExceptionValor;
+begin
+  raise TExceptionTelefone.Create('Valor deve ser maior que 0!');
 end;
     
 end.

@@ -16,6 +16,9 @@ begin
   response.Message := e.Message;
   response.Data := nil;
 
+  if e.ClassType = TExceptionIdInvalido then
+    response.ErrorCode := RetornaErrorsCode.ID_INVALIDO;
+
   if e.ClassType = TExceptionNome then
     response.ErrorCode := RetornaErrorsCode.NOME_NAO_INFORMADO;
 
@@ -33,6 +36,15 @@ begin
 
   if e.ClassType = TExceptionMinTelefone then
     response.ErrorCode := RetornaErrorsCode.TELEFONE_INVALIDO;
+
+  if e.ClassType = TExceptionPlaca then
+    response.ErrorCode := RetornaErrorsCode.PLACA_NAO_INFORMADA;
+
+  if e.ClassType = TExceptionMinPlaca then
+    response.ErrorCode := RetornaErrorsCode.PLACA_INVALIDA;
+
+  if e.ClassType = TExceptionValor then
+    response.ErrorCode := RetornaErrorsCode.VALOR_INVALIDO;
 
   Result := response;
 end;

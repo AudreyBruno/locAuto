@@ -14,12 +14,16 @@ type
   end;
 
   TErrorsCode = record
+    ID_INVALIDO,
     NOME_NAO_INFORMADO,
     NOME_INVALIDO,
     DOCUMENTO_NAO_INFORMADO,
     DOCUMENTO_INVALIDO,
     TELEFONE_NAO_INFORMADO,
-    TELEFONE_INVALIDO: Integer;
+    TELEFONE_INVALIDO,
+    PLACA_NAO_INFORMADA,
+    PLACA_INVALIDA,
+    VALOR_INVALIDO: Integer;
   end;
 
   function RetornaMsgResponse: TMsgResponse;
@@ -38,12 +42,16 @@ end;
 
 function RetornaErrorsCode: TErrorsCode;
 begin
-  Result.NOME_NAO_INFORMADO := 100;
-  Result.NOME_INVALIDO := 101;
-  Result.DOCUMENTO_NAO_INFORMADO := 102;
-  Result.DOCUMENTO_INVALIDO := 103;
-  Result.TELEFONE_NAO_INFORMADO := 104;
-  Result.TELEFONE_INVALIDO := 105;
+  Result.ID_INVALIDO := 100;
+  Result.NOME_NAO_INFORMADO := 101;
+  Result.NOME_INVALIDO := 102;
+  Result.DOCUMENTO_NAO_INFORMADO := 103;
+  Result.DOCUMENTO_INVALIDO := 104;
+  Result.TELEFONE_NAO_INFORMADO := 105;
+  Result.TELEFONE_INVALIDO := 106;
+  Result.PLACA_NAO_INFORMADA := 107;
+  Result.PLACA_INVALIDA := 108;
+  Result.VALOR_INVALIDO := 109;
 end;
 
 end.
