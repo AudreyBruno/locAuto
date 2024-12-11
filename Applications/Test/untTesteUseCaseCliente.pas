@@ -95,6 +95,7 @@ procedure TTestUseCaseCliente.AlterarCliente;
 var
   response: TResponse;
 begin
+  Cliente.ID := 1;
   Cliente.Nome := 'Audrey';
   Cliente.Documento := '11111111111';
   Cliente.Telefone := '(12) 34567-8912';

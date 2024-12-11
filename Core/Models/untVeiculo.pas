@@ -68,7 +68,7 @@ begin
   if Trim(FPlaca) = '' then
     ExceptionPlaca;
 
-  if Length(FPlaca) < 6 then
+  if Length(FPlaca) < 7 then
     ExceptionMinPlaca;
 
   if FValor <= 0 then

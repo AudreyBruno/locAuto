@@ -72,17 +72,17 @@ end;
 
 procedure ExceptionPlaca;
 begin
-  raise TExceptionTelefone.Create('Placa não pode estar em branco!');
+  raise TExceptionPlaca.Create('Placa não pode estar em branco!');
 end;
 
 procedure ExceptionMinPlaca;
 begin
-  raise TExceptionMinDocumento.Create('Placa deve ter no mínimo 6 caracteres!');
+  raise TExceptionMinDocumento.Create('Placa deve ter no mínimo 7 caracteres!');
 end;
 
 procedure ExceptionValor;
 begin
-  raise TExceptionTelefone.Create('Valor deve ser maior que 0!');
+  raise TExceptionValor.Create('Valor deve ser maior que 0!');
 end;
     
 end.

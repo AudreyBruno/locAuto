@@ -19,9 +19,14 @@ uses
   untExceptions in '..\..\Core\Exceptions\untExceptions.pas',
   untCliente in '..\..\Core\Models\untCliente.pas',
   untIUseCaseCliente in '..\..\Core\Ports\untIUseCaseCliente.pas',
-  untResponse in '..\..\Core\Response\untResponse.pas',
   untUseCaseCliente in '..\..\Core\UseCases\untUseCaseCliente.pas',
-  untUtils in '..\..\Utils\untUtils.pas';
+  untUtils in '..\..\Utils\untUtils.pas',
+  untDtoVeiculo in '..\..\Core\DTO\untDtoVeiculo.pas',
+  untVeiculo in '..\..\Core\Models\untVeiculo.pas',
+  untIUseCaseVeiculo in '..\..\Core\Ports\untIUseCaseVeiculo.pas',
+  untResponse in '..\..\Core\Response\untResponse.pas',
+  untUseCaseVeiculo in '..\..\Core\UseCases\untUseCaseVeiculo.pas',
+  untTesteUseCaseVeiculo in 'untTesteUseCaseVeiculo.pas';
 
 { keep comment here to protect the following conditional from being removed by the IDE when adding a unit }
 {$IFNDEF TESTINSIGHT}
