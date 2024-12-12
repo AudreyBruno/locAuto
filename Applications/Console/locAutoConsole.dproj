@@ -210,6 +210,8 @@
         <DCCReference Include="..\..\Core\DTO\untDtoVeiculo.pas"/>
         <DCCReference Include="..\..\Core\UseCases\untUseCaseVeiculo.pas"/>
         <DCCReference Include="..\..\Core\Models\untLocacao.pas"/>
+        <DCCReference Include="..\..\Core\Ports\untIUseCaseLocacao.pas"/>
+        <DCCReference Include="..\..\Core\DTO\untDtoLocacao.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
