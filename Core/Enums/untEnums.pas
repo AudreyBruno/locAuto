@@ -23,7 +23,10 @@ type
     TELEFONE_INVALIDO,
     PLACA_NAO_INFORMADA,
     PLACA_INVALIDA,
-    VALOR_INVALIDO: Integer;
+    VALOR_INVALIDO,
+    VEICULO_NAO_INFORMADO,
+    CLIENTE_NAO_INFORMADO,
+    VEICULO_ALUGADO: Integer;
   end;
 
   function RetornaMsgResponse: TMsgResponse;
@@ -52,6 +55,9 @@ begin
   Result.PLACA_NAO_INFORMADA := 107;
   Result.PLACA_INVALIDA := 108;
   Result.VALOR_INVALIDO := 109;
+  Result.VEICULO_NAO_INFORMADO := 110;
+  Result.CLIENTE_NAO_INFORMADO := 111;
+  Result.VEICULO_ALUGADO := 112;
 end;
 
 end.
