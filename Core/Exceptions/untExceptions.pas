@@ -20,6 +20,10 @@ type
   TExceptionMinPlaca = class(Exception);
   TExceptionValor = class(Exception);
 
+  TExceptionLocacaoVeiculo = class(Exception);
+  TExceptionLocacaoCliente = class(Exception);
+  TExceptionLocacaoStatus = class(Exception);
+
   procedure ExceptionIdInvalido;
 
   procedure ExceptionNome;
@@ -33,6 +37,10 @@ type
   procedure ExceptionPlaca;
   procedure ExceptionMinPlaca;
   procedure ExceptionValor;
+
+  procedure ExceptionLocacaoVeiculo;
+  procedure ExceptionLocacaoCliente;
+  procedure ExceptionLocacaoStatus;
 implementation
 
 procedure ExceptionIdInvalido;
@@ -83,6 +91,21 @@ end;
 procedure ExceptionValor;
 begin
   raise TExceptionValor.Create('Valor deve ser maior que 0!');
+end;
+
+procedure ExceptionLocacaoVeiculo;
+begin
+  raise TExceptionLocacaoVeiculo.Create('Veículo deve ser informado!');
+end;
+
+procedure ExceptionLocacaoCliente;
+begin
+  raise TExceptionLocacaoCliente.Create('Cliente deve ser informado!');
+end;
+
+procedure ExceptionLocacaoStatus;
+begin
+  raise TExceptionLocacaoStatus.Create('Veiculo ja alugado!');
 end;
     
 end.
