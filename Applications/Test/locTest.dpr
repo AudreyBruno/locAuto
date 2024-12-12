@@ -15,7 +15,6 @@ uses
   DUnitX.TestFramework,
   untTesteUseCaseCliente in 'untTesteUseCaseCliente.pas',
   untDtoCliente in '..\..\Core\DTO\untDtoCliente.pas',
-  untEnums in '..\..\Core\Enums\untEnums.pas',
   untExceptions in '..\..\Core\Exceptions\untExceptions.pas',
   untCliente in '..\..\Core\Models\untCliente.pas',
   untIUseCaseCliente in '..\..\Core\Ports\untIUseCaseCliente.pas',
@@ -26,7 +25,13 @@ uses
   untIUseCaseVeiculo in '..\..\Core\Ports\untIUseCaseVeiculo.pas',
   untResponse in '..\..\Core\Response\untResponse.pas',
   untUseCaseVeiculo in '..\..\Core\UseCases\untUseCaseVeiculo.pas',
-  untTesteUseCaseVeiculo in 'untTesteUseCaseVeiculo.pas';
+  untTesteUseCaseVeiculo in 'untTesteUseCaseVeiculo.pas',
+  untTesteUseCaseLocacao in 'untTesteUseCaseLocacao.pas',
+  untUseCaseLocacao in '..\..\Core\UseCases\untUseCaseLocacao.pas',
+  untDtoLocacao in '..\..\Core\DTO\untDtoLocacao.pas',
+  untEnums in '..\..\Core\Enums\untEnums.pas',
+  untLocacao in '..\..\Core\Models\untLocacao.pas',
+  untIUseCaseLocacao in '..\..\Core\Ports\untIUseCaseLocacao.pas';
 
 { keep comment here to protect the following conditional from being removed by the IDE when adding a unit }
 {$IFNDEF TESTINSIGHT}

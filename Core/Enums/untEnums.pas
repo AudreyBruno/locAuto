@@ -10,7 +10,10 @@ type
     ALTERADO_COM_SUCESSO,
     CONSULTA_REALIZADA_COM_SUCESSO,
     CONSULTA_SEM_RETORNO,
-    DELETADO_COM_SUCESSO: String;
+    DELETADO_COM_SUCESSO,
+    VEICULO_NAO_INFORMADO,
+    CLIENTE_NAO_INFORMADO,
+    VEICULO_ALUGADO: String;
   end;
 
   TErrorsCode = record
@@ -41,6 +44,9 @@ begin
   Result.CONSULTA_REALIZADA_COM_SUCESSO := 'Consulta realizada com sucesso!';
   Result.CONSULTA_SEM_RETORNO := 'Consulta sem retorno!';
   Result.DELETADO_COM_SUCESSO := 'Deletado com sucesso!';
+  Result.VEICULO_NAO_INFORMADO := 'Veículo não informado!';
+  Result.CLIENTE_NAO_INFORMADO := 'Cliente não informado!';
+  Result.VEICULO_ALUGADO := 'Veículo ja foi alugado!';
 end;
 
 function RetornaErrorsCode: TErrorsCode;

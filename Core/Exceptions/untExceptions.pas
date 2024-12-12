@@ -95,17 +95,17 @@ end;
 
 procedure ExceptionLocacaoVeiculo;
 begin
-  raise TExceptionLocacaoVeiculo.Create('Veículo deve ser informado!');
+  raise TExceptionLocacaoVeiculo.Create('Veículo não informado!');
 end;
 
 procedure ExceptionLocacaoCliente;
 begin
-  raise TExceptionLocacaoCliente.Create('Cliente deve ser informado!');
+  raise TExceptionLocacaoCliente.Create('Cliente não informado!');
 end;
 
 procedure ExceptionLocacaoStatus;
 begin
-  raise TExceptionLocacaoStatus.Create('Veiculo ja alugado!');
+  raise TExceptionLocacaoStatus.Create('Veículo ja foi alugado!');
 end;
     
 end.

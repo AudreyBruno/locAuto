@@ -46,6 +46,15 @@ begin
   if e.ClassType = TExceptionValor then
     response.ErrorCode := RetornaErrorsCode.VALOR_INVALIDO;
 
+  if e.ClassType = TExceptionLocacaoVeiculo then
+    response.ErrorCode := RetornaErrorsCode.VEICULO_NAO_INFORMADO;
+
+  if e.ClassType = TExceptionLocacaoCliente then
+    response.ErrorCode := RetornaErrorsCode.CLIENTE_NAO_INFORMADO;
+
+  if e.ClassType = TExceptionLocacaoStatus then
+    response.ErrorCode := RetornaErrorsCode.VEICULO_ALUGADO;
+
   Result := response;
 end;
 
