@@ -26,6 +26,8 @@ type
     property DataLocacao: TDateTime read FDataLocacao write SetDataLocacao;
     property DataDevolucao: TDateTime read FDataDevolucao write SetDataDevolucao;
     property Total: Currency read FTotal write SetTotal;
+
+    procedure ValidarRegras;
   end;
 
 implementation
@@ -60,6 +62,10 @@ end;
 procedure TLocacao.SetVeiculo(const Value: TVeiculo);
 begin
   FVeiculo := Value;
+end;
+
+procedure TLocacao.ValidarRegras;
+begin
 end;
 
 end.
